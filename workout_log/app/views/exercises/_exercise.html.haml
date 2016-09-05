@@ -1,0 +1,7 @@
+%p= exercise.name
+%p= exercise.sets
+%p= exercise.reps
+%p
+  / = link_to "Edit", edit_workout_exercise_path(@workout, exercise.id)
+  = link_to "Delete", workout_exercise_path(@workout, exercise.id), method: :delete, data: { confirm: "Are you sure you want to delete this exercise?"}
+
